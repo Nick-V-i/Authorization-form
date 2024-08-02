@@ -1,0 +1,262 @@
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: OpenSans, sans-serif;
+  background-color: #E9ECEF;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 160px;
+  width: 100%;
+}
+
+.reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.authorization,
+.registration,
+.access-recovery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 100;
+  color: #444F57;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 200;
+  color: #6C7987;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.remember-me {
+  font-size: 14px;
+  font-weight: 100;
+  color: #5F627E;
+  width: 50%;
+
+}
+
+.form {
+  background-color: #FFFFFF;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 20px rgba(0, 37, 38, 0.5);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form__svg {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form__input:hover {
+  outline: none;
+  border-color: #9CCBFF;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #3493ff;
+  box-shadow: 0 0 0 2px rgba(0, 183, 255, 0.25);
+}
+
+.form__input:active {
+  outline: none;
+  border: 1px solid #0077ff;
+}
+
+.form__input-button {
+  font-size: 14px;
+  font-weight: 500;
+  width: 150px;
+  height: 40px;
+  background-color: #007BFF;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.form__input-button:hover {
+  outline: none;
+  background-color: #48a1ff;
+}
+
+.form__input-button:focus {
+  outline: none;
+  background-color: #003a7d;
+  box-shadow: 0 0 0 2px rgba(0, 183, 255, 0.25);
+}
+
+.form__input-button:active {
+  outline: none;
+  background-color: #00346f;
+  transform: scale(0.95);
+}
+
+.form__under {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.form__input-checkbox-text {
+  user-select: none;
+}
+
+.form__link {
+  font-size: 12px;
+  font-weight: 100;
+  color: #027afb;
+  margin-bottom: 15px;
+  align-self: flex-start;
+  margin-top: auto;
+  transition: color 0.3s ease-in-out;
+  user-select: none;
+}
+
+
+.form__link:hover {
+  color: #94c6ff;
+}
+
+.form__link:focus {
+  color: #003a7d;
+
+}
+
+.form__link:active {
+  color: #00346f;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 25px;
+  width: 35px;
+  background-color: #fff;
+  border: 2px solid #48a1ff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #48a1ff;
+  border-color: #48a1ff;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+  opacity: 1;
+}
+
+.custom-checkbox span {
+  margin-left: 8px;
+  color: #5F627E;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.visually-hidden {
+  visibility: hidden;
+  position: absolute;
+}
