@@ -1,1 +1,3 @@
-# Authorization-form
+## Форма авторизации
+
+- Простая форма авторизации. Ознакомиться с ней вы можете по [этой ссылке](https://nick-v-i.github.io/Authorization-form/)
